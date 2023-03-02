@@ -1,4 +1,5 @@
 const display = document.querySelector('#display');
+let opr = document.querySelector('.operator');
 let contFloat = 0;
 
 function clickButton(number) {
@@ -20,6 +21,23 @@ function clickSymbol(symbol) {
         case 'CA':
             display.value = '0';
             contFloat = 0;
+            opr.innerText = '';
+            break;
+        case '+':
+            setOperator(symbol);
+            break;
+        case '-':
+            setOperator(symbol);
+            break;
+        case 'x':
+            setOperator(symbol);
+            break;
+        case '/':
+            setOperator('÷');
             break;
     }
+}
+
+function setOperator(symbol) {
+    opr.innerText = symbol;
 }

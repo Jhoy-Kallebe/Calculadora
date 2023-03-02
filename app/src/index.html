@@ -11,7 +11,7 @@
     <main class="container">
         <section class="display">
             <input id="display" type="text" value="0" disabled>
-            <p>+</p>
+            <p class="operator"></p>
         </section>
         <section class="keyboard">
             <div class="numb-symb">
@@ -23,17 +23,17 @@
                 <button class="btn" onclick="clickButton('4')">4</button>
                 <button class="btn" onclick="clickButton('5')">5</button>
                 <button class="btn" onclick="clickButton('6')">6</button>
-                <button class="btn oprt">+</button>
-                <button class="btn oprt">-</button>
+                <button class="btn oprt" onclick="clickSymbol('+')">+</button>
+                <button class="btn oprt" onclick="clickSymbol('-')">-</button>
                 <button class="btn" onclick="clickButton('7')">7</button>
                 <button class="btn" onclick="clickButton('8')">8</button>
                 <button class="btn" onclick="clickButton('9')">9</button>
-                <button class="btn oprt">x</button>
-                <button class="btn oprt">÷</button>
+                <button class="btn oprt" onclick="clickSymbol('x')">x</button>
+                <button class="btn oprt" onclick="clickSymbol('/')">÷</button>
                 <button class="btn" onclick="clickButton('00')">00</button>
                 <button class="btn" onclick="clickButton('0')">0</button>
                 <button class="btn" onclick="clickButton('.')">.</button>
-                <button class="btn oprt">=</button>
+                <button class="btn oprt" onclick="clickSymbol('=')">=</button>
             </div>
         </section>
     </main>
