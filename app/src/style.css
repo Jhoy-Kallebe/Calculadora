@@ -27,13 +27,25 @@ main {
 .display {
     background-color: #ced6e0;
     box-shadow: inset 0 0 10px rgba(0,0,0,.5);
-    padding: 20px 10px;
+    padding: 20px 15px;
     text-align: end;
+    position: relative;
+}
+
+.display input {
+    font-size: 45px;
+    font-weight: 600;
+    width: 100%;
+    text-align: end;
+    background: none;
+    border: none;
+    letter-spacing: 5px;
 }
 
 .display p {
-    font-size: 32px;
-    font-weight: 600;
+    position: absolute;
+    top: 5px;
+    font-size: 20px;
 }
 
 .keyboard {
