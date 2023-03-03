@@ -33,9 +33,9 @@ function clickSymbol(symbol) {
             break;
         case '=': 
             executeAccount(operatorAccount);
-            display.value = result;
-            opr.innerText = '';
-            valueOneDisplay.innerText = '';
+            break;
+        case 'back':
+            backspace();
             break;
     }
 }
@@ -58,6 +58,7 @@ function clickOperator(operator) {
     operatorAccount = operator;
     valueOne = display.value;
     display.value = '0';
+    contFloat = 0;
     valueOneDisplay.innerText = valueOne;
 }
 
@@ -83,6 +84,25 @@ function executeAccount(operator) {
             valueTwo = display.value;
             divi(valueOne, valueTwo);
             break;
+    }
+    display.value = result;
+    opr.innerText = '';
+    contFloat = 0;
+    valueOneDisplay.innerText = '';
+}
+
+function backspace() {
+    let number = display.value;
+    
+    if(number.charAt(number.length - 1) === '.'){
+        contFloat = 0;
+    }
+
+    let result = number.substring(0, number.length-1)
+    display.value = result;
+
+    if(display.value.length < 1) {
+        display.value = '0';
     }
 }
 
